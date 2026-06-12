@@ -9,6 +9,7 @@ import LineupPage from "./pages/Lineup";
 import ArtistDetailPage from "./pages/ArtistDetail";
 import SchedulePage from "./pages/Schedule";
 import FestivalPage from "./pages/Festival";
+import AnfahrtPage from "./pages/Anfahrt";
 
 // Root Route
 const rootRoute = createRootRoute();
@@ -56,6 +57,12 @@ const festivalRoute = createRoute({
   component: FestivalPage,
 });
 
+const anfahrtRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/anfahrt",
+  component: AnfahrtPage,
+});
+
 // Router
 const routeTree = rootRoute.addChildren([
   homeRoute,
@@ -65,6 +72,7 @@ const routeTree = rootRoute.addChildren([
   artistDetailRoute,
   scheduleRoute,
   festivalRoute,
+  anfahrtRoute,
 ]);
 const router = createRouter({ routeTree });
 
