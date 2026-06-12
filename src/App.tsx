@@ -7,7 +7,7 @@ import AboutPage from "./pages/About";
 import ImpressumPage from "./pages/Impressum";
 import LineupPage from "./pages/Lineup";
 import ArtistDetailPage from "./pages/ArtistDetail";
-import SchedulePage from "./pages/Schedule";
+import TimetablePage from "./pages/Timetable";
 import FestivalPage from "./pages/Festival";
 import AnfahrtPage from "./pages/Anfahrt";
 
@@ -45,10 +45,13 @@ const artistDetailRoute = createRoute({
   component: ArtistDetailPage,
 });
 
-const scheduleRoute = createRoute({
+const timetableRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/schedule",
-  component: SchedulePage,
+  path: "/timetable",
+  validateSearch: (search) => ({
+    day: (search.day as string) ?? "friday",
+  }),
+  component: TimetablePage,
 });
 
 const festivalRoute = createRoute({
@@ -70,7 +73,7 @@ const routeTree = rootRoute.addChildren([
   impressumRoute,
   lineupRoute,
   artistDetailRoute,
-  scheduleRoute,
+  timetableRoute,
   festivalRoute,
   anfahrtRoute,
 ]);

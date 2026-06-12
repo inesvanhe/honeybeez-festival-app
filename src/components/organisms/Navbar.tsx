@@ -9,7 +9,7 @@ function Navbar() {
       <div className="flex gap-8">
         <NavItem label="Home" to="/" />
         <NavItem label="Lineup" to="/lineup" />
-        <NavItem label="Schedule" to="/schedule" />
+        <NavItem label="Timetable" to="/timetable" />
       </div>
     </nav>
   );
