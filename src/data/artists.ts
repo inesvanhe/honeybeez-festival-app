@@ -14,7 +14,7 @@ export const artists = [
     id: "charlotte-de-hive",
     name: "Charlotte de Hive",
     genre: "Techno",
-    image: "/images/artists/charlotte-the-hive.png",
+    image: "/images/artists/charlotte-de-hive.png",
     description:
       "Dunkle Techno-Sets und treibende Grooves bis tief in die Nacht.",
     day: "saturday",
