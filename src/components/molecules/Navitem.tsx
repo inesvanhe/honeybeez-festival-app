@@ -6,7 +6,14 @@ interface NavItemProps {
 }
 
 function NavItem({ label, to }: NavItemProps) {
-  return <Link to={to}>{label}</Link>;
+  return (
+    <Link
+      to={to}
+      className="text-[#F5F0E8] uppercase tracking-widest text-sm hover:text-[#C9A84C] transition-all"
+    >
+      {label}
+    </Link>
+  );
 }
 
 export default NavItem;
